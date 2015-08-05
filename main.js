@@ -2,8 +2,24 @@ $(document).ready(function() {
   CameraTag.observe('MyFirstCamera', 'initialized', function(){
     myCamera = CameraTag.cameras['MyFirstCamera'];
     console.log(myCamera);
-    myCamera.setLength(60);
+    // myCamera.setLength(60);
   });
+  CameraTag.observe('MySecondCamera', 'initialized', function(){
+    myCamera2 = CameraTag.cameras['MySecondCamera'];
+    console.log(myCamera2);
+  });
+
+  $('#setLength').on('click', function() {
+    myCamera.setLength($('#vidLength').val());
+    $('#vidLength').val('');
+  });  
+    // if ($('#vidLength').val() == '') {
+    //   $('#record').prop("disabled",true);
+    //   console.log('NO VID LENGTH');
+    // } else {
+    //   $('#record').prop("disabled",false);
+    // }
+
 
   $('#record').on('click', function() {
     myCamera.record();

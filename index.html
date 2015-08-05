@@ -19,23 +19,27 @@
             data-autopreview='false'
             data-publish-on-upload='false'
             data-detect-camera='false'
-            data-sources='upload'
             data-videobitrate='131072'>
     </camera>
-    <div class='trans' id='MyFirstCamera-start-screen'>
+
+    <div id='MyFirstCamera-start-screen'>
       <a id='record'>click to start recording</a>
     </div>   
-    <div class="vid_length">Video Length: <input type="text" name="vidLength" /></div>
 
     <!-- <button id='record' class='btn btn-primary'>rec</button> -->
-
     <button id='stop-record' class='btn btn-danger'>stop</button>
     <button id='play' class='btn btn-warning'>review</button>
-    <button id='pub' class='btn btn-success'>publish</button>
+    <button id='pub' class='btn btn-success'>export</button>
     <button id='reset' class='btn btn-danger'>reset</button>
 
+    <div class="vid_length">Video Length: <input type="text" id="vidLength" /><button id='setLength'>set length</button></div>
 <!--     <h1>Video</h1>
     <video id='rando' data-uuid='v-eb9e79d6-998a-44f6-acd4-ab0e603ad597'></video> -->
+
+    <camera id='MySecondCamera' 
+            data-uuid='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'
+            style='width:400px;height:250px;'>
+    </camera>
   </section>
 
 
