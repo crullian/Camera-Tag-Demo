@@ -2,11 +2,47 @@
 <html>
 <head>
     <title>Camera Tag Test</title>
+    <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='main.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js' type='text/javascript'></script>
     <script src='//cameratag.com/api/v5/js/cameratag.js' type='text/javascript'></script>
-    <script src='main.js' type='text/javascript'></script>
   </head>
   <body>
-    <h1>Test Cam</h1>
-    <camera id='MyFirstCamera' data-app-id='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'></camera>
+
+  <section id='camera_section'>
+    <h1>Camera</h1>
+
+    <camera id='MyFirstCamera'
+            style='width:400px;height:250px;'
+            data-uuid='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'
+            data-pre-roll-length='3'
+            data-autopreview='false'
+            data-publish-on-upload='false'
+            data-detect-camera='false'
+            data-sources='upload'
+            data-videobitrate='131072'>
+    </camera>
+    <div class='trans' id='MyFirstCamera-start-screen'>
+      <a id='record'>click to start recording</a>
+    </div>   
+    <div class="vid_length">Video Length: <input type="text" name="vidLength" /></div>
+
+    <!-- <button id='record' class='btn btn-primary'>rec</button> -->
+
+    <button id='stop-record' class='btn btn-danger'>stop</button>
+    <button id='play' class='btn btn-warning'>review</button>
+    <button id='pub' class='btn btn-success'>publish</button>
+    <button id='reset' class='btn btn-danger'>reset</button>
+
+<!--     <h1>Video</h1>
+    <video id='rando' data-uuid='v-eb9e79d6-998a-44f6-acd4-ab0e603ad597'></video> -->
+  </section>
+
+
+
+
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' type='text/javascript'></script>
+    <script src='main.js' type='text/javascript'></script>
+
   </body>
 </html>
