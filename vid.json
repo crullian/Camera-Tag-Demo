@@ -1,0 +1,29 @@
+{
+  "uuid": "v-2ac86e44-f376-461e-b5ee-8747ed8f865b",
+  "camera_uuid": "a-2a0c8350-1dab-0133-0b7b-22000b8b3aed",
+  "created_at": "2015-08-05T18:36:33.000Z",
+  "percent_complete": 100,
+  "short_code": "0cNRSQ",
+  "metadata": {},
+  "state": "published",
+  "recorded_from": "http://cameratag.com/api/v5/cameras/a-2a0c8350-1dab-0133-0b7b-22000b8b3aed/videos/v-2ac86e44-f376-461e-b5ee-8747ed8f865b/mobile_record",
+  "publish_type": "upload",
+  "formats": [{
+    "name": "qvga",
+    "width": 320,
+    "height": 240,
+    "video_url": "https://cameratag.com/videos/v-2ac86e44-f376-461e-b5ee-8747ed8f865b/qvga/mp4.mp4",
+    "flv_url": null,
+    "flv_stream": null,
+    "mp4_url": "https://cameratag.com/videos/v-2ac86e44-f376-461e-b5ee-8747ed8f865b/qvga/mp4.mp4",
+    "mp4_stream": "rtmp://sa0xpxq1vz1ri.cloudfront.net/cfx/st\u0026mp4:a-2a0c8350-1dab-0133-0b7b-22000b8b3aed/v-2ac86e44-f376-461e-b5ee-8747ed8f865b_qvga.mp4?Expires=1438811653\u0026Signature=T67LYzTCxGzINGrsTTkPGsDvnimgfJaoCnHRrDU0sM7cmThGpPZCaDNBITm2c5CcZJ4Xwlu~1jNTH~peW-fUQrmN-HBcPpdr~6IOYPa-Sg5IR7GhfDhEep2FlN4FFn8Ew~bwpsAHJVe~OXbOzovvC3jpWOhWfnQNPySHgKzT8WjHOx~V8MgxD6fPrTVfKPxNEXx5FtBlbAafq721LrlWRatqPiK6Rfx~niY40geC7Txk~atYxAJLDi~JRbf0o~pI3u17vDY4ow1ROvTtlWdA43NF14mwlnx8DTosz1-74rwSKWRmBAFs2G-E9JiJVwJIvJ0zI7Ch5YqDdozB9vD18A__\u0026Key-Pair-Id=APKAIYEVFIMHKY7YWGKA",
+    "webm_url": null,
+    "webm_stream": null,
+    "thumbnail_url": "https://cameratag.com/videos/v-2ac86e44-f376-461e-b5ee-8747ed8f865b/qvga/thumb.png",
+    "small_thumbnail_url": "https://cameratag.com/videos/v-2ac86e44-f376-461e-b5ee-8747ed8f865b/qvga/small_thumb.png",
+    "state": "COMPLETED",
+    "completed_at": null,
+    "length": 9
+  }],
+  "plays": 0
+}
