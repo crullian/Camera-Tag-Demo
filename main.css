@@ -15,9 +15,13 @@ body {
 .buddy {
     position: relative;
     top: 255px;
-    left: 105px;
+    left: 96px;
 }
 
 .vid_length {
   padding: 20px;
+}
+
+#stop #play #pub #reset {
+  display: none;
 }

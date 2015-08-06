@@ -1,19 +1,33 @@
 $(document).ready(function() {
+
+  var videoLength;
+
   CameraTag.observe('MyFirstCamera', 'initialized', function() {
     myCamera = CameraTag.cameras['MyFirstCamera'];
     console.log(myCamera);
+    myCamera.connect();
+    myCamera.stopRecording();
     // myCamera.setLength(60);
   });
-  // CameraTag.observe('MySecondCamera', 'initialized', function(){
-  //   myCamera2 = CameraTag.cameras['MySecondCamera'];
-  //   console.log(myCamera2);
-  // });
+
   CameraTag.observe('MyFirstCamera', 'uploadStarted', function() {
-    console.log('UPLOAD STARTED!');
+    console.log(myCamera.uploader);
+  });
+
+  CameraTag.observe('MySecondCamera', 'initialized', function() {
+    myCamera2 = CameraTag.cameras['MySecondCamera'];
+    console.log(myCamera2);
+  });
+
+  CameraTag.observe('MyFirstCamera', 'published', function() {
+    console.log('YOU PUBLISHED SON!');
+    myCamera.reset();
   })
 
   $('#setLength').on('click', function() {
-    myCamera.setLength($('#vidLength').val());
+    videoLength = $('#vidLength').val();
+    myCamera.setLength(videoLength);
+    console.log('RECORDING TIME SET TO', videoLength, 'SECONDS');
     $('#vidLength').val('');
   });
   // if ($('#vidLength').val() == '') {
@@ -27,7 +41,7 @@ $(document).ready(function() {
     myCamera.record();
   });
 
-  $('#stop-record').on('click', function() {
+  $('#stop').on('click', function() {
     myCamera.stopRecording();
   });
 
@@ -45,6 +59,6 @@ $(document).ready(function() {
 
   $('#my_upload_button').on('click', function() {
     // console.log($(this).parent().find('input').first());
-    $(this).parent().find('input').first().click();
+    $(this).parent().find('input').click();
   });
 });
