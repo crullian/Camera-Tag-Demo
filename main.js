@@ -8,8 +8,8 @@ $(document).ready(function() {
   //   myCamera2 = CameraTag.cameras['MySecondCamera'];
   //   console.log(myCamera2);
   // });
-  CameraTag.observe('MyFirstCamera', 'uploadFileSelected', function(file) {
-    console.log('FILE SELECTED: ', file);
+  CameraTag.observe('MyFirstCamera', 'uploadStarted', function() {
+    console.log('UPLOAD STARTED!');
   })
 
   $('#setLength').on('click', function() {
@@ -43,4 +43,8 @@ $(document).ready(function() {
     myCamera.reset();
   });
 
+  $('#my_upload_button').on('click', function() {
+    // console.log($(this).parent().find('input').first());
+    $(this).parent().find('input').first().click();
+  });
 });
