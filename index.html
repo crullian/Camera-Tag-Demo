@@ -14,7 +14,6 @@
 
             <camera id='MyFirstCamera'
                     name='myCamera'
-                    style='width:400px;height:250px;'
                     data-uuid='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'
                     data-pre-roll-length='3'
                     data-record-on-connect='false'
@@ -22,29 +21,37 @@
                     data-publish-on-upload='false'
                     data-sources='record, upload'
                     data-detect-camera='false'
-                    data-maxlength='30'
+                    data-maxlength='120'
                     data-videobitrate='131072'>
             </camera>
 
             <div id='MyFirstCamera-start-screen'>
                 <!-- <a class='cameratag_record'>click here to record</a> -->
-                <button class='btn btn-primary  glyphicon glyphicon-open-file cameratag_upload buddy' id='my_upload_button'></button>
+                <h1>Your Turn</h1>
+                <button id='connect' class='btn'>camera</button>
+                <button class='btn cameratag_upload' id='my_upload_button'>upload</button>
+                <h4>two minutes max</h4>
             </div>
-            <div id="MyFirstCamera-wait-screen"></div> 
-            <div id="MyFirstCamera-completed-screen" style="background:rgba(0,0,0,0.23);">Video Published!</div>   
+
+            <div id="MyFirstCamera-wait-screen">
+              <button id='record' class='btn'>record</button>
+              <button id='cancel' class='btn'>cancel</button>
+            </div>
+
+            <div id="MyFirstCamera-completed-screen">Video Published!</div>
 
             <div id='MyFirstCamera-accept-screen'>
                 <p>review, export, or reset your video</p>
             </div>
 
-            <button id='connect' class='btn btn-primary glyphicon glyphicon-facetime-video'></button>
-            <button id='record' class='btn btn-primary glyphicon glyphicon-record'></button>
-            <button id='stop' class='btn btn-danger glyphicon glyphicon-stop'></button>
-            <button id='play' class='btn btn-warning glyphicon glyphicon-play'></button>
-            <button id='pub' class='btn btn-success glyphicon glyphicon-cloud-upload'></button>
-            <button id='reset' class='btn btn-danger glyphicon glyphicon-refresh'></button>
 
-            <div class="vid_length">Video Length: <input type="text" id="vidLength" /><button id='setLength'>set length</button></div>
+            <!--<button id='record' class='btn'>record</button>-->
+            <!--<button id='stop' class='btn'>stop</button>-->
+            <!--<button id='play' class='btn btn-warning glyphicon glyphicon-play'></button>-->
+            <!--<button id='pub' class='btn btn-success glyphicon glyphicon-cloud-upload'></button>-->
+            <!--<button id='reset' class='btn btn-danger glyphicon glyphicon-refresh'></button>-->
+
+            <!--<div class="vid_length">Video Length: <input type="text" id="vidLength" /><button id='setLength'>set length</button></div>-->
             <!--     <h1>Video</h1>
             <video id='rando' data-uuid='v-eb9e79d6-998a-44f6-acd4-ab0e603ad597'></video> -->
 

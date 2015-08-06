@@ -12,6 +12,10 @@ body {
   height: 300px;
 }*/
 
+button {
+  opacity: 0.75;
+}
+
 .buddy {
     position: relative;
     top: 255px;

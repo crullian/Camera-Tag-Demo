@@ -2,15 +2,11 @@ $(document).ready(function() {
 
   var videoLength;
 
-  // CameraTag.observe('MyFirstCamera', 'initialized', function() {
-  //   myCamera = CameraTag.cameras['MyFirstCamera'];
-  //   console.log(myCamera);
-  //   // myCamera.connect();
-  //   // myCamera.setLength(60);
-  // });
-
-  CameraTag.observe('MyFirstCamera', 'uploadStarted', function() {
-    console.log(myCamera.uploader);
+  CameraTag.observe('MyFirstCamera', 'initialized', function() {
+   myCamera = CameraTag.cameras['MyFirstCamera'];
+   console.log(myCamera);
+   // myCamera.connect();
+   // myCamera.setLength(60);
   });
 
   CameraTag.observe('MySecondCamera', 'initialized', function() {
@@ -27,7 +23,7 @@ $(document).ready(function() {
     videoLength = $('#vidLength').val();
     myCamera.setLength(videoLength);
     console.log('RECORDING TIME SET TO', videoLength, 'SECONDS');
-    $('#vidLength').val('');
+    videoLength = '';
   });
   // if ($('#vidLength').val() == '') {
   //   $('#record').prop("disabled",true);
@@ -56,7 +52,7 @@ $(document).ready(function() {
     myCamera.publish();
   });
 
-  $('#reset').on('click', function() {
+  $('#cancel').on('click', function() {
     myCamera.reset();
   });
 
