@@ -9,22 +9,22 @@ $(document).ready(function() {
    // myCamera.setLength(60);
   });
 
-  CameraTag.observe('MySecondCamera', 'initialized', function() {
-    myCamera2 = CameraTag.cameras['MySecondCamera'];
-    console.log(myCamera2);
-  });
+  //CameraTag.observe('MySecondCamera', 'initialized', function() {
+  //  myCamera2 = CameraTag.cameras['MySecondCamera'];
+  //  console.log(myCamera2);
+  //});
 
   CameraTag.observe('MyFirstCamera', 'published', function() {
     console.log('YOU PUBLISHED SON!');
     // myCamera.reset();
   })
 
-  $('#setLength').on('click', function() {
-    videoLength = $('#vidLength').val();
-    myCamera.setLength(videoLength);
-    console.log('RECORDING TIME SET TO', videoLength, 'SECONDS');
-    videoLength = '';
-  });
+  //$('#setLength').on('click', function() {
+  //  videoLength = $('#vidLength').val();
+  //  myCamera.setLength(videoLength);
+  //  console.log('RECORDING TIME SET TO', videoLength, 'SECONDS');
+  //  videoLength = '';
+  //});
   // if ($('#vidLength').val() == '') {
   //   $('#record').prop("disabled",true);
   //   console.log('NO VID LENGTH');
@@ -50,10 +50,12 @@ $(document).ready(function() {
 
   $('#pub').on('click', function() {
     myCamera.publish();
+    alert('Ya PUBLISHED')
   });
 
-  $('#cancel').on('click', function() {
+  $('.cancel').on('click', function() {
     myCamera.reset();
+    console.log('DIJA RUN?');
   });
 
   $('#my_upload_button').on('click', function() {

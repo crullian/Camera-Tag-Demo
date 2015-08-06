@@ -8,9 +8,16 @@ body {
   margin-left: 30%;
 }
 
-/*.cameratag_screen {
-  height: 300px;
-}*/
+.publish {
+  display: block;
+  height: 25%;
+  margin: 20px;
+  margin-bottom: 3%;
+  text-align: center;
+  /*border: solid 1px white;*/
+  color: #fff;
+  background: rgba(0,0,0,0.75);
+}
 
 button {
   opacity: 0.75;
@@ -26,6 +33,6 @@ button {
   padding: 20px;
 }
 
-#stop #play #pub #reset {
-  display: none;
+#MyFirstCamera-accept-screen {
+
 }

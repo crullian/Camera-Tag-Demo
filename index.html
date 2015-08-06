@@ -3,9 +3,11 @@
     <head>
         <title>Camera Tag Test</title>
         <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="cameratag.css"/>
         <link rel='stylesheet' type='text/css' href='main.css'>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js' type='text/javascript'></script>
-        <script src='//cameratag.com/api/v5/js/cameratag.js' type='text/javascript'></script>
+        <!--<script src='//cameratag.com/api/v5/js/cameratag.js' type='text/javascript'></script>-->
+        <script src='cameratag.js' type='text/javascript'></script>
     </head>
     <body>
 
@@ -34,30 +36,19 @@
             </div>
 
             <div id="MyFirstCamera-wait-screen">
-              <button id='record' class='btn'>record</button>
-              <button id='cancel' class='btn'>cancel</button>
+                <button id='record' class='btn'>record</button>
+                <button class='btn cancel'>cancel</button>
+            </div>
+
+            <div id="MyFirstCamera-accept-screen">
+                <button class="btn cameratag_play">preview</button>
+                <button class="btn cameratag_record">re-record</button>
+                <button class="btn cameratag_publish">publish</button>
+                <button class='btn cancel'>cancel</button>
             </div>
 
             <div id="MyFirstCamera-completed-screen">Video Published!</div>
 
-            <div id='MyFirstCamera-accept-screen'>
-                <p>review, export, or reset your video</p>
-            </div>
-
-
-            <!--<button id='record' class='btn'>record</button>-->
-            <!--<button id='stop' class='btn'>stop</button>-->
-            <!--<button id='play' class='btn btn-warning glyphicon glyphicon-play'></button>-->
-            <!--<button id='pub' class='btn btn-success glyphicon glyphicon-cloud-upload'></button>-->
-            <!--<button id='reset' class='btn btn-danger glyphicon glyphicon-refresh'></button>-->
-
-            <!--<div class="vid_length">Video Length: <input type="text" id="vidLength" /><button id='setLength'>set length</button></div>-->
-            <!--     <h1>Video</h1>
-            <video id='rando' data-uuid='v-eb9e79d6-998a-44f6-acd4-ab0e603ad597'></video> -->
-
-            <!-- <camera id='MySecondCamera' 
-                    data-uuid='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'>
-            </camera> -->
         </section>
 
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' type='text/javascript'></script>
