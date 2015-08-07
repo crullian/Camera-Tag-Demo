@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  var videoLength;
+  //var videoLength;
+  var myVideo;
 
   CameraTag.observe('MyFirstCamera', 'initialized', function() {
    myCamera = CameraTag.cameras['MyFirstCamera'];
@@ -9,15 +10,23 @@ $(document).ready(function() {
    // myCamera.setLength(60);
   });
 
-  //CameraTag.observe('MySecondCamera', 'initialized', function() {
-  //  myCamera2 = CameraTag.cameras['MySecondCamera'];
-  //  console.log(myCamera2);
-  //});
+  CameraTag.observe('MyFirstCamera', 'serverConnected', function() {
+    alert('SERVER CONNECTED');
+  });
+
+  CameraTag.observe('MyFirstCamera', 'uploadFileSelected()', function() {
+    console.log('UPLOAD FILE SELECTED');
+  });
+
+  CameraTag.observe('MyFirstCamera', 'uploadStarted', function() {
+    console.log('UPLOAD STARTED');
+  });
 
   CameraTag.observe('MyFirstCamera', 'published', function() {
-    console.log('YOU PUBLISHED SON!');
+    myVideo = myCamera.getVideo();
+    console.log('VIDEO ID IS: ', myVideo['uuid']);
     // myCamera.reset();
-  })
+  });
 
   //$('#setLength').on('click', function() {
   //  videoLength = $('#vidLength').val();
@@ -25,41 +34,37 @@ $(document).ready(function() {
   //  console.log('RECORDING TIME SET TO', videoLength, 'SECONDS');
   //  videoLength = '';
   //});
-  // if ($('#vidLength').val() == '') {
-  //   $('#record').prop("disabled",true);
-  //   console.log('NO VID LENGTH');
-  // } else {
-  //   $('#record').prop("disabled",false);
-  // }
 
   $('#connect').on('click', function() {
     myCamera.connect();
   });
 
-  $('#record').on('click', function() {
-    myCamera.record();
-  });
+  //$('#record').on('click', function() {
+  //  myCamera.record();
+  //});
 
-  $('#stop').on('click', function() {
-    myCamera.stopRecording();
-  });
+  //$('#stop').on('click', function() {
+  //  myCamera.stopRecording();
+  //});
+  //
+  //$('#play').on('click', function() {
+  //  myCamera.play();
+  //});
 
-  $('#play').on('click', function() {
-    myCamera.play();
-  });
-
-  $('#pub').on('click', function() {
-    myCamera.publish();
-    alert('Ya PUBLISHED')
+  //$('#pub').on('click', function() {
+  //  myCamera.publish();
+  //  alert('Ya PUBLISHED')
+  //});
+  $('.cameratag_upload').on('click', function() {
+    alert('Choose wisely, we limit video length to TWO MINUTES')
   });
 
   $('.cancel').on('click', function() {
     myCamera.reset();
-    console.log('DIJA RUN?');
+    console.log('CAMERA RESET');
   });
 
-  $('#my_upload_button').on('click', function() {
-    // console.log($(this).parent().find('input').first());
-    $(this).parent().find('input').click();
-  });
+  //$('#my_upload_button').on('click', function() {
+  //  $(this).parent().find('input').click();
+  //});
 });

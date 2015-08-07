@@ -429,6 +429,8 @@ if (typeof(CameraTag) == "undefined") {
       var accept_screen;
       var wait_screen;
       var wait_message;
+      var ready_screen;
+      var ready_message;
       var completed_screen;
       var error_screen;
       var error_message;
@@ -883,6 +885,17 @@ if (typeof(CameraTag) == "undefined") {
         // add to DOM
         container.append(wait_screen);
 
+        // ready screen
+        ready_screen = $("#"+dom_id+"-ready-screen").addClass("cameratag_screen");
+        ready_message = ready_screen.find(".cameratag_wait_message");
+        if (ready_screen.length == 0) {
+         ready_screen = $('<div class="cameratag_screen cameratag_wait"></div>');
+          var spinner = $('<div class="cameratag_spinner"><img src="//'+appServer+'/assets/loading.gif"/><br/><span class="cameratag_wait_message">'+CT_i18n[16]+'</span></div>');
+          ready_screen.append(spinner);
+          ready_message = ready_screen.find(".cameratag_wait_message");
+        }
+        // add to DOM
+        container.append(ready_screen);
 
         // completed screen
         completed_screen = $("#"+dom_id+"-completed-screen").addClass("cameratag_screen");
@@ -1079,6 +1092,12 @@ if (typeof(CameraTag) == "undefined") {
         message = message || "please wait";
         wait_message.html(message);
         self.loadInterface(wait_screen);
+      }
+
+      var ready = function(message) {
+        message = message || "please wait";
+        ready_message.html(message);
+        self.loadInterface(ready_screen);
       }
 
       var populate_hidden_inputs = function() {
