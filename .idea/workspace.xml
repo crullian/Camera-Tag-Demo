@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30ed0c5-8c83-44ae-bcb2-2500b7684479" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cameratag.js" afterPath="$PROJECT_DIR$/cameratag.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -27,7 +25,7 @@
     <favorites_list name="cameraTest" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5558894">
+    <splitter split-orientation="horizontal" split-proportion="0.4591346">
       <split-first>
         <leaf>
           <file leaf-file-name="cameratag.js" pinned="false" current-in-tab="false">
@@ -46,8 +44,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7932692">
-                  <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.5480769">
+                  <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
@@ -60,18 +58,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3524436">
-                  <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cameratag.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/cameratag.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="126" selection-end-column="19" />
+                <state vertical-scroll-proportion="0.6898496">
+                  <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -81,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+                  <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -449,6 +437,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
@@ -495,11 +489,12 @@
       <updated>1438894955529</updated>
       <workItem from="1438894956766" duration="6834000" />
       <workItem from="1438954134558" duration="18117000" />
+      <workItem from="1438983311526" duration="1362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24951000" />
+    <option name="totallyTimeSpent" value="26313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="854" y="23" width="1706" height="1413" extended-state="0" />
@@ -553,6 +548,49 @@
     <entry file="file://$PROJECT_DIR$/cameratag.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1438970003000" expanded="true" signature="45305:45336" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameratag.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="126" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameratag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="426" column="23" selection-start-line="426" selection-start-column="17" selection-end-line="426" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -601,22 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cameratag.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="126" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cameratag.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -628,18 +650,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/cameratag.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3524436">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="126" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7932692">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.5480769">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6898496">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding />
         </state>
       </provider>

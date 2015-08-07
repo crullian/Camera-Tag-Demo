@@ -16,10 +16,6 @@ $(document).ready(function() {
    // myCamera.setLength(60);
   });
 
-  CameraTag.observe('MyFirstCamera', 'serverConnected', function() {
-    //alert('server connected');
-  });
-
   CameraTag.observe('MyFirstCamera', 'uploadFileSelected', function(file) {
     console.log('UPLOAD FILE SELECTED', file); // never hit this wtf?
   });
@@ -44,9 +40,23 @@ $(document).ready(function() {
     reScan();
   });
 
-  CameraTag.observe('MyFirstCamera','waitingForCameraActivity', function() {
-    alert('waiting for camera access');
+  //CameraTag.observe('MyFirstCamera','waitingForCameraActivity', function() {
+  //  alert('waiting for camera access');
+  //});
+
+  CameraTag.observe('MyFirstCamera','detectingCamera', function() {
+    //alert('DETECTING CAMERA');
+    $('#MyFirstCamera-camera-detection-screen').append('<h1>Waiting for video signal</h1>');
   });
+
+  CameraTag.observe('MyFirstCamera','readyToRecord', function() {
+    //alert('WE ARE READY TO RECORD');
+    $('#MyFirstCamera-camera-detection-screen').children('h1').remove();
+  });
+
+  //CameraTag.observe('MyFirstCamera','serverConnected', function() {
+  //  alert('SERVER IS CONNECTED');
+  //});  // not this
 
 
   //$('#setLength').on('click', function() {
