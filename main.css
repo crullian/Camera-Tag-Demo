@@ -33,6 +33,22 @@ button {
   padding: 20px;
 }
 
-#MyFirstCamera-accept-screen {
+#MyFirstCamera-start-screen {
+  display: none;
+  background: rgba(0,0,0,0.27);
+}
 
+#MyFirstCamera-camera-detection-screen {
+  display: none;
+}
+
+#MyFirstCamera-accept-screen {
+  display: none;
+  background: rgba(0,0,0,0.27);
+}
+
+#MyFirstCamera-completed-screen{
+  color: #09a72e;
+  display: none;
+  background: rgba(0,0,0,0.5);
 }

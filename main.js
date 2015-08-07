@@ -2,6 +2,12 @@ $(document).ready(function() {
 
   //var videoLength;
   var myVideo;
+  var myCamera;
+  var videoElement = $("<video id='MyPlayer' data-uuid='myVideo['uuid']'></video>");
+
+  var reScan = function() {
+    CameraTag.setup();
+  };
 
   CameraTag.observe('MyFirstCamera', 'initialized', function() {
    myCamera = CameraTag.cameras['MyFirstCamera'];
@@ -11,11 +17,15 @@ $(document).ready(function() {
   });
 
   CameraTag.observe('MyFirstCamera', 'serverConnected', function() {
-    alert('SERVER CONNECTED');
+    //alert('server connected');
   });
 
-  CameraTag.observe('MyFirstCamera', 'uploadFileSelected()', function() {
-    console.log('UPLOAD FILE SELECTED');
+  CameraTag.observe('MyFirstCamera', 'uploadFileSelected', function(file) {
+    console.log('UPLOAD FILE SELECTED', file); // never hit this wtf?
+  });
+
+  CameraTag.observe("MyFirstCamera","uploadProgress", function(file) {
+    console.log('UPLOAD PROGRESS', file);
   });
 
   CameraTag.observe('MyFirstCamera', 'uploadStarted', function() {
@@ -24,9 +34,20 @@ $(document).ready(function() {
 
   CameraTag.observe('MyFirstCamera', 'published', function() {
     myVideo = myCamera.getVideo();
-    console.log('VIDEO ID IS: ', myVideo['uuid']);
+    console.log('VIDEO ID: ', myVideo['uuid']);
     // myCamera.reset();
   });
+
+  CameraTag.observe('MyFirstCamera', 'processed', function() {
+    console.log('PROCESSED: ', myVideo['uuid']);
+    $('#MyPlayer').attr('data-uuid', myVideo['uuid']);
+    reScan();
+  });
+
+  CameraTag.observe('MyFirstCamera','waitingForCameraActivity', function() {
+    alert('waiting for camera access');
+  });
+
 
   //$('#setLength').on('click', function() {
   //  videoLength = $('#vidLength').val();
@@ -37,6 +58,7 @@ $(document).ready(function() {
 
   $('#connect').on('click', function() {
     myCamera.connect();
+    myCamera.showRecorder();
   });
 
   //$('#record').on('click', function() {
@@ -61,7 +83,6 @@ $(document).ready(function() {
 
   $('.cancel').on('click', function() {
     myCamera.reset();
-    console.log('CAMERA RESET');
   });
 
   //$('#my_upload_button').on('click', function() {

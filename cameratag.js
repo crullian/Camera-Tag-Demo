@@ -1094,11 +1094,11 @@ if (typeof(CameraTag) == "undefined") {
         self.loadInterface(wait_screen);
       }
 
-      var ready = function(message) {
-        message = message || "please wait";
-        ready_message.html(message);
-        self.loadInterface(ready_screen);
-      }
+      //var ready = function(message) {
+      //  message = message || "please wait";
+      //  ready_message.html(message);
+      //  self.loadInterface(ready_screen);
+      //}
 
       var populate_hidden_inputs = function() {
         $("#"+input_name+"_video_uuid").val(video.uuid);
