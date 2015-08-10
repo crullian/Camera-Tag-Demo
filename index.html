@@ -7,50 +7,52 @@
         <link rel='stylesheet' type='text/css' href='main.css'>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js' type='text/javascript'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' type='text/javascript'></script>
-        <!--<script src='//cameratag.com/api/v5/js/cameratag.js' type='text/javascript'></script>-->
-        <script src='cameratag.js' type='text/javascript'></script>
+        <script src='//cameratag.com/api/v5/js/cameratag.js' type='text/javascript'></script>
+        <!--<script src='cameratag.js' type='text/javascript'></script>-->
         <script src='main.js' type='text/javascript'></script>
     </head>
     <body>
 
         <section id='camera_section'>
 
-            <camera id='MyFirstCamera'
-                    name='myCamera'
-                    data-uuid='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'
-                    data-pre-roll-length='3'
-                    data-record-on-connect='false'
-                    data-autopreview='false'
-                    data-upload-on-select='true'
-                    data-publish-on-upload='true'
-                    data-detect-camera='true'
-                    data-poll-for-processed='true'
-                    data-maxlength='120'
-                    data-mirror-recording='false'>
-            </camera>
+            <div id="camera">
+              <camera id='MyFirstCamera'
+                      name='myCamera'
+                      data-uuid='a-2a0c8350-1dab-0133-0b7b-22000b8b3aed'
+                      data-pre-roll-length='3'
+                      data-record-on-connect='false'
+                      data-autopreview='false'
+                      data-upload-on-select='true'
+                      data-publish-on-upload='true'
+                      data-detect-camera='true'
+                      data-poll-for-processed='true'
+                      data-maxlength='120'
+                      data-mirror-recording='false'>
+              </camera>
 
-            <div id='MyFirstCamera-start-screen'>
+              <div id='MyFirstCamera-start-screen'>
                 <h1>Your Turn</h1>
                 <button id='connect' class='btn'>camera</button>
                 <button class='btn cameratag_upload'>upload</button>
                 <h4>two minutes max</h4>
-            </div>
+              </div>
 
-            <div id="MyFirstCamera-camera-detection-screen">
+              <div id="MyFirstCamera-camera-detection-screen">
                 <button class='btn cameratag_record'>record</button>
                 <button class='btn cancel'>cancel</button>
-            </div>
+              </div>
 
-            <div id="MyFirstCamera-accept-screen">
+              <div id="MyFirstCamera-accept-screen">
                 <button class="btn cameratag_play">preview</button>
                 <button class="btn cameratag_record">re-record</button>
                 <button class="btn cameratag_publish">publish</button>
                 <button class='btn cancel'>cancel</button>
-            </div>
+              </div>
 
-            <div id="MyFirstCamera-completed-screen">
-              <h1>Evacuation Complete</h1>
-            </div><br />
+              <div id="MyFirstCamera-completed-screen">
+                <h1>Your video will appear here shortly</h1>
+              </div>
+            </div>
 
             <video id="MyPlayer"></video>
 

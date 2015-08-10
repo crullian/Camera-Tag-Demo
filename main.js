@@ -36,6 +36,7 @@ $(document).ready(function() {
 
   CameraTag.observe('MyFirstCamera', 'processed', function() {
     console.log('PROCESSED: ', myVideo['uuid']);
+    $('#camera_section').children('#camera').remove();
     $('#MyPlayer').attr('data-uuid', myVideo['uuid']);
     reScan();
   });
