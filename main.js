@@ -10,17 +10,17 @@ $(document).ready(function() {
   };
 
   CameraTag.observe('MyFirstCamera', 'initialized', function() {
-   myCamera = CameraTag.cameras['MyFirstCamera'];
-   console.log(myCamera);
-   // myCamera.connect();
-   // myCamera.setLength(60);
+    myCamera = CameraTag.cameras['MyFirstCamera'];
+    console.log(myCamera);
+    // myCamera.connect();
+    // myCamera.setLength(60);
   });
 
   CameraTag.observe('MyFirstCamera', 'uploadFileSelected', function(file) {
     console.log('UPLOAD FILE SELECTED', file); // never hit this wtf?
   });
 
-  CameraTag.observe("MyFirstCamera","uploadProgress", function(file) {
+  CameraTag.observe("MyFirstCamera", "uploadProgress", function(file) {
     console.log('UPLOAD PROGRESS', file);
   });
 
@@ -45,12 +45,12 @@ $(document).ready(function() {
   //  alert('waiting for camera access');
   //});
 
-  CameraTag.observe('MyFirstCamera','detectingCamera', function() {
+  CameraTag.observe('MyFirstCamera', 'detectingCamera', function() {
     //alert('DETECTING CAMERA');
     $('#MyFirstCamera-camera-detection-screen').append('<h1>Waiting for video signal</h1>');
   });
 
-  CameraTag.observe('MyFirstCamera','readyToRecord', function() {
+  CameraTag.observe('MyFirstCamera', 'readyToRecord', function() {
     //alert('WE ARE READY TO RECORD');
     $('#MyFirstCamera-camera-detection-screen').children('h1').remove();
   });
