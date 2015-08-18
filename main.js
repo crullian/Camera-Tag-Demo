@@ -16,12 +16,12 @@ $(document).ready(function() {
     // myCamera.setLength(60);
   });
 
-  CameraTag.observe('MyFirstCamera', 'uploadFileSelected', function(file) {
+  CameraTag.observe('MyFirstCamera', 'UploadFileSelected', function(file) {
     console.log('UPLOAD FILE SELECTED', file); // never hit this wtf?
   });
 
-  CameraTag.observe("MyFirstCamera", "uploadProgress", function(file) {
-    console.log('UPLOAD PROGRESS', file);
+  CameraTag.observe("MyFirstCamera", "UploadProgress", function(file) { // capital 'U'
+    console.log('HITTING UPLOAD PROGRESS FINALLY!!!!!', file);
   });
 
   CameraTag.observe('MyFirstCamera', 'uploadStarted', function() {
